@@ -1,0 +1,13 @@
+﻿@{
+    Layout="layout";
+}
+
+<h1>@Model.Employees</h1>
+
+@{
+    <p>Id Name Age</p>
+    for (int i = @Model.From - 1; i < @Model.To; i++)
+    {
+        <p>@Model.EmployeesList.Employees[i].Id @Model.EmployeesList.Employees[i].Name @Model.EmployeesList.Employees[i].Age</p>
+    }
+}
